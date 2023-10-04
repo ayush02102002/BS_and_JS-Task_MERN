@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task-4</title>
+</head>
+<body>
+    <div class="abc"style="margin-left: 50px; margin-top: 50px;">
+        <button id="date" onclick="dclick()">Show Date</button><br><br>
+        <div id="dp" style="font-size: large;"></div><br><br>
+        <button id="time" onclick="tclick()">Show Time</button><br><br>
+        <div id="tp" style="font-size: large;"></div>
+    </div>
+    <script>
+       function tclick(){
+            const time=new Date();
+            document.getElementById("tp").innerHTML=time;
+        }
+
+        function dclick(){
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const d = new Date();
+            let month = months[d.getMonth()];
+            let day=d.getDate();
+            console.log(day);
+            let year=d.getFullYear();
+            var x=day+"/"+month+"/"+year;
+            document.getElementById("dp").innerHTML=x;
+        }
+    </script>
+</body>
+</html>
